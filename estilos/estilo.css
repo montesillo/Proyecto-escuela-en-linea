@@ -1,0 +1,56 @@
+*{/*No deja sangria en toda la pantalla*/
+	margin: 0;
+	padding: 0;
+}
+
+header{
+	width: 100%;
+	background: rgba(254, 181, 87,.8);
+	height: 70px;
+	position: fixed;/*Deja el menu fijo*/
+	z-index: 10;/*Indica la importancia de una caja, entre mas alto
+	 sea el numero mayor importacia tendra*/
+}
+
+.ancho{
+	width: 80%;
+	height: 70px;
+	margin: auto;
+}
+
+nav{
+	width: 70%;
+	height: 70px;
+	
+	float: right;	
+	text-align: right;
+	padding-top: 24px;
+	box-sizing: border-box;
+}
+nav ul li{
+	display: inline;
+}
+nav ul li a{
+	color: #fff;
+	font-size: 13px;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding-left: 15px;
+	font-weight: bold; /*coloca el estilo de negritas*/
+	letter-spacing: 1px;
+	font-family: rale;
+}
+nav ul li a:hover{
+	color: #444;
+}
+.botones{
+	float: none;
+	text-align: center;
+	padding-top: 300px;
+}
+
+.formulario{
+	float: none;
+	text-align: center;
+	padding-top: 300px;
+}

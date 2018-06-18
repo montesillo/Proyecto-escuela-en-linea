@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registro</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilos/estiloRegistro.css">
+
+</head>
+<body>
+	<header>
+			<div class="ancho">
+			<nav>
+				<ul>
+					<li><a href="index.php">Inicio</a></li>
+					<li><a href="#">Nosotros</a></li>
+					<li><a href="#">Contacto</a></li>
+
+				</ul>
+			</nav>
+		</div>
+
+		
+	</header>
+
+	<div class="formulario">
+		<form action="registro.php" method="post" id="from1"> 
+			<p>¿Eres alumno o profesor?</p><br>
+  			<input type="radio" name="rol" value="profesor" checked> Profesor<br>
+ 			<input type="radio" name="rol" value="alumno"> Alumno<br><br>
+ 			<p>Nombre: </p><br>
+ 			<input type="text" name="nombre" onmouseout="activarBoton();" id="name"><br>
+ 			<p>Apellido Paterno: </p><br>
+ 			<input type="text" name="apaterno" onmouseout="activarBoton();" id="apaterno"><br>
+ 			<p>Apellido Materno: </p><br>
+ 			<input type="text" name="amaterno" onmouseout="activarBoton();" id="amaterno"><br>
+ 			<p>Correo: </p><br>
+ 			<input type="mail" name="email" onmouseout="activarBoton();" id="email">  <br>
+ 			<p>Contraseña: </p><br>
+ 			<input type="password" name="password" onmouseout="activarBoton();" id="password1"><br>
+ 			<p>Repita su contraseña: </p><br>
+ 			<input type="password" name="password2" onmouseout="activarBoton();" id="password2"><br>
+
+			<input type="submit" name="enviar" id="enviar" >
+
+			<script type="text/javascript">
+				var enviar= document.getElementById('enviar');
+					enviar.disabled = true;
+				
+				function activarBoton(){
+					var name= document.getElementById('name');
+					var apaterno= document.getElementById('apaterno');
+					var amaterno= document.getElementById('amaterno');
+					var email= document.getElementById('email');
+					var password1= document.getElementById('password1');
+					var password2= document.getElementById('password2');
+					
+
+					if (name.value !="" && apaterno.value !="" && amaterno.value !="" && email.value !="" && password1.value !="") {
+						if (password1.value == password2.value) {
+							enviar.disabled = false;
+						}else{
+							alert("Contraseña diferente");
+						}
+					}
+				}
+			</script>
+
+		</form>
+		
+		
+	</div>
+
+</body>
+</html>
