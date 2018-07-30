@@ -50,10 +50,13 @@
 
 			if ($correo == $_SESSION['email'] and $pass == $_SESSION['pass'] ) {
 				setcookie("sesion", $maes, time()+3600);
+				header('location: principal.php');
+
 				
 			}else{
-				header('location: inicio.php');
-				unser($_COOKIE["sesion"]);
+				header('location: inicio.html');
+				echo '<script>alert("Correo o Contraseña incorrectas");';
+				setcookie('sesion',null, -1);
 
 			}
 			return $this->cerrar;
