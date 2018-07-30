@@ -39,7 +39,7 @@ if (empty($_COOKIE['sesion'])) {
 				</ul>
 			</nav>
 		</div>
-		<form method="POST" action="inicio.php">
+		<form method="POST" action="principal.php">
 			<select name="grado" style="display: none" id="nivel">
 				<option value="0">Elije una opción</option>
 				<optgroup label="Primaria">

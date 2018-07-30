@@ -8,9 +8,8 @@
 </head>
 <body>
 	<header>
-		<?php setcookie('sesion',null, -1); ?>
 			<div class="ancho">
-			<nav>
+				<nav>
 				<ul>
 					<li><a href="index.php">Inicio</a></li>
 					<li><a href="#">Nosotros</a></li>
@@ -24,14 +23,11 @@
 	</header>
 
 	<div class="botones">
-		<form action="registro.html" method="post">
-			<input type="submit" value="Registrate">	
-		</form>
-		<form action="inicio.html" method="post">
-			<input type="submit" value="Maestros">
-		</form>
-		<form action="alumnos.html" method="post">
-			<input type="submit" value="Alumnos">
+		<form action="alumnos.php" method="post">
+			<p>Correo: </p><input type="text" name="email">	<br><br>
+			<p>Contraseña: </p><input type="password" name="pass"><br><br>
+		
+			<input type="submit" value="Inicia Sesión" name="inicio">
 		</form>
 		
 		

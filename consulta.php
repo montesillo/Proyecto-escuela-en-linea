@@ -62,6 +62,35 @@
 			return $this->cerrar;
 
 		}
+		public function AlumnosSQL(){
+				
+				$correo = '';
+				$pass = '';
+				$nom = '';
+			$this->Consulta();
+
+			while ($reg = mysqli_fetch_array($this->sql)) {
+				$correo = $reg['correo'];
+				$pass = $reg['password'];
+				$nom = $reg['nombre'];
+				$alum = $reg['id_alumno'];
+				
+			}
+
+			if ($correo == $_SESSION['email'] and $pass == $_SESSION['pass'] ) {
+				setcookie("sesion", $alum, time()+3600);
+				header('location: principal.php');
+
+				
+			}else{
+				header('location: alumnos.html');
+				echo '<script>alert("Correo o Contraseña incorrectas");</script>';
+				setcookie('sesion',null, -1);
+
+			}
+			return $this->cerrar;
+
+		}
 
 		public function MateriasSQL(){
 			$this->Consulta();
